@@ -8,20 +8,18 @@ motorized wheels, and real-time pose awareness (position and orientation).
 
 ### Step 1 : Open a terminal, navigate to a new folder, and execute the following commands:
 
+ cd ~/catkin_ws/src && git clone https://github.com/KTBE/Mission_Coordination_project.git
+
+ cd ~/catkin_ws && catkin_make && source ~/catkin_ws/devel/setup.bash
+
+### Step 2 : Run the following commands sequentially in the same terminal to make the agent.py file executable :
+
  $cd / home / user / catkin_ws /src/ Mission_Coordination_project /
  evry_project_strategy / nodes
 
  $chmod +x agent .py
 
  $cd ~
-
-
-### Step 2 : Run the following commands sequentially in the same terminal to make the agent.py file executable :
-
-cd /home/user/catkin_ws/src/Mission_Coordination_project/evry_project_strategy/nodes
-chmod +x agent.py
-
-cd ~
 
 ### Step 3 : Gazebo simulation:
 
@@ -32,3 +30,10 @@ roslaunch evry_project_description simu_robot.launch
 ### Step 4 : Run the python script containing the strategy by using this code :
 
 roslaunch evry_project_strategy agent.launch
+
+roslaunch evry_project_strategy agent_strategy1.launch
+
+roslaunch evry_project_strategy agent_with_pid.launch
+
+roslaunch evry_project_strategy agent_with_timing.launch
+
